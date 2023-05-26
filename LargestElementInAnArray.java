@@ -20,6 +20,5 @@ public class LargestElementInAnArray {
 		}
 
 		System.out.println("Largest elemenet in a array is " +largest);
-
 }
 }
