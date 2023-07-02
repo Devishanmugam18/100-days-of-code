@@ -1,4 +1,3 @@
-
 function generateRow(row) {
     let ans = 1;
     let ansRow = [1]; // inserting the 1st element
