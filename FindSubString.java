@@ -31,7 +31,7 @@ public static void main( String args[ ] ) {
 					System.out.println( start_ind );
 					break;
 				}
-			}
+		}
 			break;
 		}
 	if( count != len2)
