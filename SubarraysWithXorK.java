@@ -12,7 +12,7 @@ public class SubarraysWithXorK {
         for (int i = 0; i < n; i++) {
             // prefix XOR till index i:
             xr = xr ^ a[i];
-
+            
             //By formula: x = xr^k:
             int x = xr ^ k;
 
