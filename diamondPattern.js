@@ -9,11 +9,11 @@ for (let row = 1; row < 2*n ; row++) {
     for (let s = 1; s <= spaces; s++){
         spaceInRow += " ";
     }
-    console.log(spaceInRow);
+    
     for (let col = 1; col <= totalColInRow; col++) {
         num += "* ";
 
     }
-     console.log(num);
+     console.log(spaceInRow+num);
 }
  
