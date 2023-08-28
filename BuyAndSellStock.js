@@ -2,33 +2,32 @@
  * @param {number[]} prices
  * @return {number}
  */
-let buyingPrice = function(prices){
-let minPrice =  prices[0];
-for(let i=1;i<prices.length-1;i++){
+const findBuyingPrice = function(prices){
+var minPrice =  prices[0];
+for(let i=1;i<prices.length;i++){
     if(prices[i]<minPrice){
         minPrice = prices[i];
         buyDay = i;
     }
 }
- return [buyDay,minPrice];
+ return [minPrice,buyDay];
 }
 
-
-let sellingPrice =  function(prices,buyDay,buyPrice){
-    let max = buyDay+1;
-    for(let j=buyDay+2; j<prices.length-1;j++){
-        if(prices[j]>max){
-            max=prices[j];
+const findSellingPrice =  function(prices,buyedPrice,buyedDay){
+    var maxPrice = prices[ buyedDay+1];
+    for(let j=buyedDay+2; j<prices.length;j++){
+        if(prices[j]>maxPrice){
+            maxPrice=prices[j];
         }
     }
-    max-buyPrice;
+    return maxPrice;
 }
 
 var maxProfit = function(prices) {
- let buy=buyingPrice(prices);
- if(buy[0]==prices.length-1){ 
- let profit=  sellingPrice(prices,buy[0],buy[1]);
- return profit;
+ const buyedPriceAndDay=findBuyingPrice(prices);
+ if(buyedPriceAndDay[1]<prices.length-1){ 
+ let soldPrice=  findSellingPrice(prices,buyedPriceAndDay[0],buyedPriceAndDay[1]);
+ return soldPrice - buyedPriceAndDay[0];
  }
  else return 0;
 };
