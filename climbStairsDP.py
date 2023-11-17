@@ -1,3 +1,4 @@
+#Dynamic Programming Solution
 class Solution:
     def climbStairs(self, n: int) -> int:
         if n == 1:
